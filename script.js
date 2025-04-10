@@ -7,16 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
   function goToSection(index) {
     if (index < 0 || index >= sections.length) return;
     isAnimating = true;
-    // Смещаем обёртку на нужное количество экранов
     wrapper.style.transform = `translateY(-${index * 100}vh)`;
     currentSectionIndex = index;
-    // По окончании анимации разблокируем переключение (2 сек)
+
     setTimeout(() => {
       isAnimating = false;
     }, 2000);
   }
 
-  // Обработка прокрутки колесиком мыши (desktop)
   window.addEventListener('wheel', function(e) {
     if (isAnimating) return;
     e.preventDefault();
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, { passive: false });
 
-  // Обработка сенсорных свайпов (mobile)
   let touchStartY = null;
   window.addEventListener('touchstart', function(e) {
     touchStartY = e.changedTouches[0].clientY;
@@ -43,3 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+window.addEventListener("load", function() {
+  setTimeout(function() {
+    window.scrollTo(0, 1);
+  }, 0);
+});
+

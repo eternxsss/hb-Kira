@@ -1,64 +1,130 @@
-/* Сброс стилей */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+
+#wrapper {
+  height: 100%;
+  transition: transform 2s ease-in-out;
+
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+
+.section1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('IMG_2129.JPG');
+}
+
+.section2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('IMG_1773.JPG');
+
+}
+
+.text-block {
+  font-family: Arial, sans-serif;
+  font-size: 8rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  text-shadow: 2px 2px black;
+}
+
+.large-text {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.small-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.section.active .text-block {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .large-text {
+    font-size: 8rem;
+    font-weight: 700;
   }
-  
-  html, body {
-    height: 100%;
-    overflow: hidden; /* Управляем скроллом через transform */
-  }
-  
-  /* Обёртка для секций с плавным переходом */
-  #wrapper {
-    height: 100%;
-    transition: transform 2s ease-in-out; /* Плавное перемещение за 2 сек */
-  }
-  
-  /* Стили для секций */
-  .section {
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .section1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url('IMG_2129.JPG');
-  }
-  
-  .section2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url('IMG_1773.JPG');
-  }
-  
-  /* Стили для текстового блока */
-  .text-block {
-    font-family: Arial, sans-serif;
+
+  .small-text {
     font-size: 2rem;
-    color: #fff;
-    text-align: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    padding: 20px;
-    border-radius: 8px;
-    text-shadow: 2px 2px black ;
+    font-weight: 400;
   }
-  
-  /* Адаптивность */
-  @media (min-width: 768px) {
-    .text-block {
-      font-size: 10rem;
-    }
+}
+
+@media (max-width: 767px) {
+  .large-text {
+    font-size: 4rem;
+    font-weight: 700;
   }
-  
-  @media (max-width: 767px) {
-    .text-block {
-      font-size: 8rem;
-    }
+
+  .small-text {
+    font-size: 1rem;
+    font-weight: 400;
   }
-  
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('IMG_2129.JPG');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.section2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('IMG_1773.JPG');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.text-block {
+  position: relative;
+  z-index: 1;
+}
