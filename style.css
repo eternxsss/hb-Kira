@@ -56,13 +56,15 @@ body {
 }
 
 .large-text {
-  font-size: 3rem;
+  font-size: 8rem;
   font-weight: 700;
 }
 
 .small-text {
-  font-size: 1rem;
+  font-size: 4rem;
   font-weight: 400;
+  text-align: justify;
+  padding: 50px;
 }
 
 .section.active .text-block {
@@ -76,7 +78,19 @@ body {
   }
 
   .small-text {
-    font-size: 2rem;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+@media (min-height: 2000px) {
+  .large-text {
+    font-size: 8rem;
+    font-weight: 700;
+  }
+
+  .small-text {
+    font-size: 40px;
     font-weight: 400;
   }
 }
