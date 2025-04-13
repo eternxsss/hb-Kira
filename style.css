@@ -41,7 +41,41 @@ body {
 .section2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('IMG_1773.JPG');
+}
 
+.section3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('photo_2025-04-13_10-29-36.jpg');
+}
+
+.section4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('photo_2025-04-13_10-29-37.jpg');
+}
+
+.section5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('photo_2025-04-13_10-33-32.jpg');
+}
+
+.section6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('photo_2025-04-13_10-29-37\ \(2\).jpg');
+}
+
+.section7 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('photo_2025-04-13_10-34-47.jpg');
+}
+
+.section8 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('photo_2025-04-13_10-29-37\ \(3\).jpg');
+}
+
+.section9 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('');
 }
 
 .text-block {
